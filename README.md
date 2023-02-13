@@ -2,5 +2,5 @@
 
 ## TC2005B
 
-[![Drive](https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg)](https://drive.google.com/drive/folders/1scDWxiiJdm1xuXSLBditKE_fVbcQzpp9?usp=sharing)
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1scDWxiiJdm1xuXSLBditKE_fVbcQzpp9?usp=sharing)
 
