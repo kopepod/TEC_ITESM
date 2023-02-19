@@ -3,6 +3,14 @@
 
 ```python
 import argparse
+import itertools
+import numpy
+
+def GenerateTable():
+	Values = numpy.arange(0,98,2);
+	for x in itertools.permutations(Values,3):
+		if x[1] > 50 or x[2] > 24:
+			continue
 
 def main():
 	parser = argparse.ArgumentParser('Reading arguments from parser')
