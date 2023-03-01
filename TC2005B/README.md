@@ -1,9 +1,8 @@
-# Reading From Parser
+# Reading From Parser and Finite State Machine
 
+Code:
 
 ```python
-#Main.py
-
 import argparse
 import itertools
 import numpy
@@ -36,19 +35,31 @@ def GenerateTable():
 	return DF
 
 def Control(Irrigacion, DF, Inputs):
+	S = [];
 	for _, row in DF.iterrows():
 		H = row["Humidity"]
 		T = row["Temperature"]
 		D = row["Hour"]
-		
-		S = [];
-		
-		if T > Inputs.TemperatureLow and D > Inputs.DateStart and D < Inputs.DateEnd and H > Inputs.HumidityHigh and Irrigacion.CurrentState == "Cerrado":
-			S.append("Abrir");
+
+		if Irrigacion.CurrentState == "Cerrado":
+			if T < Inputs.TemperatureLow and D not in range(Inputs.DateStart,Inputs.DateEnd) and H < Inputs.HumidityLow:
+				Irrigacion.CurrentState = "Abierto";
+				S.append("Abierto");
+				continue
+			else:
+				S.append("Cerrado");
+		if Irrigacion.CurrentState == "Abierto":
+			if T > Inputs.TemperatureHigh or D in range(Inputs.DateStart,Inputs.DateEnd) or H > Inputs.HumidityHigh:
+				Irrigacion.CurrentState = "Cerrado";
+				S.append("Cerrado");
+				continue
+			else:
+				S.append("Abierto");			
 			
-			
-	print(S)	
-		
+
+	DF = DF.assign(Salida = S)
+	DF.to_csv("FSM.csv", index = False)
+	
 	
 
 def main():
@@ -72,6 +83,10 @@ def main():
 
 if __name__ == "__main__":
 	main();
+```
 
+Run as:
 
+```bash
+python StateDiagramExample.py --TemperatureHigh 35 --TemperatureLow 25 --HumidityHigh 50 --HumidityLow 10 --DateStart 6 --DateEnd 19 --Crop Beans
 ```
