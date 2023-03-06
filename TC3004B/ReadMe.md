@@ -39,6 +39,8 @@ def main():
 	
 	args = parser.parse_args()
 	
+	print(str(args))
+	
 	ConfigFile = args.config_file
 	
 	Settings = loadSettings(ConfigFile);
