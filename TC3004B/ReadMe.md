@@ -1,5 +1,11 @@
 # TC3004B
 
+Intall PyYAML
+
+```bash
+pip install PyYAML
+```
+
 Code configuration
 
 ```bash
