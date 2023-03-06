@@ -1,6 +1,6 @@
 # TC3004B
 
-Intall PyYAML
+Install PyYAML
 
 ```bash
 pip install PyYAML
