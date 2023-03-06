@@ -41,11 +41,16 @@ def main():
 	
 	ConfigFile = args.config_file
 	
-	loadSettings(ConfigFile)
+	Settings = loadSettings(ConfigFile);
+	
+	print(Settings.name)
+	print(Settings.lastname)
+	print(Settings.phone)
 
 if __name__ == '__main__':
 	main()
-
 ```
 
-
+```bash
+python Main.py --config_file Settings.yml
+```
