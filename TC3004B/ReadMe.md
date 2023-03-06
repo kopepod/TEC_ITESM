@@ -2,6 +2,10 @@
 
 Code configuration
 
+```bash
+nano Settings.yml
+```
+
 ```yaml
 name : bob
 lastname : cruz
@@ -9,6 +13,10 @@ phone : 443612346
 ```
 
 Load from code
+
+```bash
+nano Main.py
+```
 
 ```python
 import yaml
