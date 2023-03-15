@@ -61,6 +61,4 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl status mongod
-pip install virtualenvwrapper
-sudo apt install python3-virtualenv
 ```
