@@ -1,4 +1,4 @@
-# Server-side installation
+# Server-side installations
 
 1. Apache
 
