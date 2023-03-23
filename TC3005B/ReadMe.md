@@ -10,7 +10,7 @@ sudo ufw allow 'Apache'
 sudo ufw status
 sudo systemctl restart apache2
 firefox http://localhost
-``
+```
 
 2. MySQL
 
