@@ -24,19 +24,23 @@ GameObject > 3D Object > Plane
 
 5. Select the material and drag it to the Plane object.
 
-## Create a tree
+## 5. Create a tree
 
-GameObject > 3D Object > Tree
+1. GameObject > 3D Object > Tree
 
-Add branches and leaves hierarchically.
+2. Add branches and leaves hierarchically, with the +branches group icon 
 
-Click root and then add *branch group* icon
+3. Click root and then add *branch group* icon to add more branches.
 
-To add more branches at each group, modify *Frequency*
+4. To add a spree of branches each group, modify *Frequency*
 
-To add leaves texture create a new material with *Nature/Tree Creator Leaves Fast* as shader. Select a png file of one leave.
+5. To add leaves texture create a new material with *Nature/Tree Creator Leaves Fast* as shader. Select a png file of one leave.
 
+## 6. Create terrain
 
+1. GameObject > 3D Object > Terrain
+
+2. Click on Paint terrain and drag the mouse to modify the landform
 
 
 
