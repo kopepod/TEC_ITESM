@@ -20,7 +20,7 @@ exit
 ```
 
 4. Import CSV
-
+CSV database
 ```csv
 Alan,al@gmail.com,22,M
 Melisa,mel@yandex.ru,23,F
