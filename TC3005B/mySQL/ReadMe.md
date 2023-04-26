@@ -16,6 +16,7 @@ USE mysql;
 CREATE USER "tc3005b"@"localhost" IDENTIFIED BY "!Tec2023";
 GRANT ALL ON *.* TO "tc3005b"@"localhost";
 FLUSH PRIVILEGES;
+ALTER USER 'tc3005b'@'localhost' IDENTIFIED WITH mysql_native_password BY '!Tec2023';
 exit
 ```
 
