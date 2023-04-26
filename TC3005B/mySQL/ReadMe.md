@@ -42,3 +42,32 @@ Run terminal
 ```bash
 mysql -u tc3005b -p --local_infile=1 newDB -e "LOAD DATA LOCAL INFILE 'newDB.csv' INTO TABLE General FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'"
 ```
+
+5. NODEJS
+
+```javascript
+var express = require("express");
+var mysql = require("mysql");
+var connection = mysql.createConnection({
+host :"localhost",
+user :"tc3005b",
+password :"!Tec2023",
+database :"newDB",
+insecureAuth : true
+});
+var app = express();
+connection.connect( function(err) {
+if(err) throw err;
+connection.query("SELECT * FROM General",
+function(err , result , fields ) {
+if(err) throw err;
+console .log( result );
+});
+});
+```
+
+```bash
+npm install mysql
+npm install express
+nodejs myCall.js 
+```
