@@ -34,6 +34,8 @@ mysql -u tc3005b -p
 Run mySQL CLI
 ```bash
 SET GLOBAL local_infile=1;
+CREATE DATABASE newDB;
+CREATE TABLE General (User VARCHAR(30), Email VARCHAR(30), Age INT, Gender VARCHAR(5),reg_date TIMESTAMP);
 ```
 Run terminal
 ```bash
