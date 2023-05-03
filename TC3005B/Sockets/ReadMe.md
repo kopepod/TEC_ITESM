@@ -1,4 +1,4 @@
-# Conecting server - client via sockets
+# Conecting client-server via sockets
 
 This code shows how connect two entities by sockets. Open two terminals, one for the **Client** ant the other for the **Server**
 
