@@ -10,7 +10,7 @@ import json
 import argparse
 import datetime
 
-parser = argparse.ArgumentParser(description='MOAB-Torqu')
+parser = argparse.ArgumentParser(description='MOAB-Torque')
 parser.add_argument('--mssg', type=str, required = True, help='Enter message')
 
 args = parser.parse_args()
