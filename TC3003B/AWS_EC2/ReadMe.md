@@ -6,9 +6,9 @@
 
 2. Create an EC2 instance
 
-Click **Launch Instance**
-Click **Amazon Linux**
-Click **Create new key pair**
+* Click **Launch Instance**
+* Click **Amazon Linux**
+* Click **Create new key pair**
 
 3. PEM keys
 
