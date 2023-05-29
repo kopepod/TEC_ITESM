@@ -1,5 +1,7 @@
 # ITESM
 
+![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)
+
 Encuentra material y recursos complementarios en las siguientes direcciones.
 
 | Clave   | URL                                                                                                                                                                                                              |
