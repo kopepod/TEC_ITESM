@@ -12,16 +12,11 @@ cd ai_service
 python manage.py migrate
 python manage.py runserver
 tree
-```
-2. The landing page should be as:
-
-```python 
 firefox http://127.0.0.1:8000/
 ```
-
 CTRL+C
 
-3. Create a new APP
+2. Create a new APP
 
 ```python
 python manage.py startapp my_app
@@ -41,7 +36,7 @@ INSTALLED_APPS = [
     "my_app",  # new
 ]
 ```
-4. Modify Project URLs
+3. Modify Project URLs
 
 ```bash
 nano ai_service/urls.py
@@ -73,7 +68,7 @@ urlpatterns = [
 ]
 
 ```
-5. Modify Views
+4. Modify Views
 
 ```bash
 nano my_app/views.py
@@ -109,7 +104,7 @@ def counterView(request):
     return render(request, "counter.html", context)
 ```
 
-6. Add HTML
+5. Add HTML
 
 ```bash
 mkdir my_app/templates
