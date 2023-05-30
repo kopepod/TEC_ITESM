@@ -25,7 +25,7 @@ CTRL+C
 
 ```python
 python manage.py startapp my_app
-nano helloworld/settings.py
+nano ai_service/settings.py
 ```
 Edit the setting to include your APP
 
