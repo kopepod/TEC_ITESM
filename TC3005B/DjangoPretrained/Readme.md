@@ -41,43 +41,7 @@ INSTALLED_APPS = [
     "my_app",  # new
 ]
 ```
-4. Modify the APP Views
-
-```bash
-nano my_app/views.py
-```
-
-```python
-from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponse
-from django.template import loader  # new
-from django.views.decorators.csrf import csrf_exempt
-
-
-@csrf_exempt
-def counterView(request):
-    mssg = "0"
-    if request.method == "POST" and "counter" in request.POST:
-        try:
-            request.session["counter"] += 1
-        except:
-            request.session["counter"] = 0
-        mssg = str(request.session["counter"])
-    elif request.method == "POST" and "reset" in request.POST:
-        request.session["counter"] = 0
-        mssg = str(request.session["counter"])
-    elif request.method == "POST" and "salute" in request.POST:
-        mssg = "Hi " + request.POST.get("textbox")
-
-    # print(request.session['counter'])
-    context = {
-        "foo": mssg,
-    }
-    return render(request, "counter.html", context)
-```
-5. Modify Project URLs
+4. Modify Project URLs
 
 ```bash
 nano ai_service/urls.py
@@ -109,12 +73,9 @@ urlpatterns = [
 ]
 
 ```
-
-6. Add HTML
+5. Modify Views
 
 ```bash
-mkdir my_app/templates
-mkdir my_app/static
 nano my_app/views.py
 ```
 ```python
@@ -122,11 +83,37 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.template import loader #new
+from django.template import loader  # new
+from django.views.decorators.csrf import csrf_exempt
 
-def index(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+
+@csrf_exempt
+def counterView(request):
+    mssg = "0"
+    if request.method == "POST" and "counter" in request.POST:
+        try:
+            request.session["counter"] += 1
+        except:
+            request.session["counter"] = 0
+        mssg = str(request.session["counter"])
+    elif request.method == "POST" and "reset" in request.POST:
+        request.session["counter"] = 0
+        mssg = str(request.session["counter"])
+    elif request.method == "POST" and "salute" in request.POST:
+        mssg = "Hi " + request.POST.get("textbox")
+
+    # print(request.session['counter'])
+    context = {
+        "foo": mssg,
+    }
+    return render(request, "counter.html", context)
+```
+
+6. Add HTML
+
+```bash
+mkdir my_app/templates
+mkdir my_app/static
 ```
 ```bash
 nano my_app/static/style.css
