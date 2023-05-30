@@ -189,7 +189,7 @@ nano my_app/static/style.css
 }
 ```
 ```bash
-nano my_app/templates/index.html
+nano my_app/templates/counter.html
 ```
 ```html
 <!DOCTYPE html>
