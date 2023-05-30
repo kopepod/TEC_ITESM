@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "my_app",  # new
 ]
 ```
-4. MOdify the Views
+4. Modify the Views
 
 ```bash
 nano my_app/views.py
@@ -80,13 +80,14 @@ def counterView(request):
 5. Modify URLs
 
 ```bash
-nano my_app/urls.py
+nano ai_service/urls.py
 ```
 ```python
-"""tc2005 URL Configuration
+"""
+URL configuration for ai_service project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -106,6 +107,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.counterView, name="counter"),
 ]
+
 ```
 
 6. Add HTML
@@ -128,6 +130,8 @@ def index(request):
 ```
 ```bash
 nano my_app/static/style.css
+```
+
 ```javascript
 .landing-section {
   min-height: 100vh;
