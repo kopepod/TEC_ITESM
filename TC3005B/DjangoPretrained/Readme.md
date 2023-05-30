@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "my_app",  # new
 ]
 ```
-4. Modify the Views
+4. Modify the APP Views
 
 ```bash
 nano my_app/views.py
@@ -77,7 +77,7 @@ def counterView(request):
     }
     return render(request, "counter.html", context)
 ```
-5. Modify URLs
+5. Modify Project URLs
 
 ```bash
 nano ai_service/urls.py
@@ -105,7 +105,7 @@ from my_app import views  # new
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.counterView, name="counter"),
+    path("", views.counterView, name="counter"), # new
 ]
 
 ```
@@ -258,4 +258,44 @@ nano my_app/templates/index.html
    </div>
 </body>
 </html>
+```
+
+```bash
+tree
+
+.
+├── ai_service
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-39.pyc
+│   │   ├── settings.cpython-39.pyc
+│   │   ├── urls.cpython-39.pyc
+│   │   └── wsgi.cpython-39.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── db.sqlite3
+├── manage.py
+└── my_app
+    ├── admin.py
+    ├── apps.py
+    ├── __init__.py
+    ├── migrations
+    │   ├── __init__.py
+    │   └── __pycache__
+    │       └── __init__.cpython-39.pyc
+    ├── models.py
+    ├── __pycache__
+    │   ├── admin.cpython-39.pyc
+    │   ├── apps.cpython-39.pyc
+    │   ├── __init__.cpython-39.pyc
+    │   ├── models.cpython-39.pyc
+    │   └── views.cpython-39.pyc
+    ├── static
+    │   └── style.css
+    ├── templates
+    │   └── counter.html
+    ├── tests.py
+    └── views.py
 ```
