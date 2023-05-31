@@ -1,5 +1,7 @@
 # Repositorio Base para Moldex
 
+Este codigo funciona para MicrosoftVisual Studio 2017
+
 ```c#
 using System;
 using System.Collections.Generic;
