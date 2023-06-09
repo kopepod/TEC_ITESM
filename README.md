@@ -15,5 +15,3 @@ Encuentra material y recursos complementarios en las siguientes direcciones.
 | TC3002B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1lFjPvhZ74xpgWmNJg7imMZRUF7VtVJG8) |
 | TC3003B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1rBW85tsM8usK4_VYXfXBN1YsRNeGhwv3) |
 | TC1004B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1L6-IG4wgpZGKgBVNdKpeXY3KoewEqayn) |
-
-
