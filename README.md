@@ -1,10 +1,6 @@
 # ITESM
 
-[![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)](https://drive.google.com/drive/folders/1Ye8CfA6YEOCu3ppvVVGMUELCrGaLQWmo)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1IKKRvm0u_OBA7l4JLpY51dLcic1tajYE)
-
-Encuentra material y recursos complementarios en las siguientes direcciones.
+[![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)](https://drive.google.com/drive/folders/1Ye8CfA6YEOCu3ppvVVGMUELCrGaLQWmo) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1IKKRvm0u_OBA7l4JLpY51dLcic1tajYE)
 
 | Clave   | URL                                                                                                                                                                                                              |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
