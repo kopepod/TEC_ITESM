@@ -68,23 +68,20 @@ https://{projet_ID}.firebaseio.com/:"TEC"
 
 ### Add form / Android Studio
 1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and one _Button_ from the Palette:
-   Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as:\
+   Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as: </br>
    android:hint="ID" \
    android:hint="Name"\
    android:hint="Salary"\
    
-   with the respective id:
+   with the respective id:</br>
    
-   android:id="@+id/reg_id"
+   android:id="@+id/reg_id"\   
+   android:id="@+id/reg_name"\
+   android:id="@+id/reg_sal"\
    
-   android:id="@+id/reg_name"
+   and for the _Button_ as:</br>
    
-   android:id="@+id/reg_sal"
-   
-   and for the _Button_ as:
-   
-   android:text="Insert"
-   
+   android:text="Insert"\   
    android:id="@+id/insert_button"
    
 3. Add buttons functionality in _MainActivity.kt_
