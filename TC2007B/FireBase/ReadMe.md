@@ -35,6 +35,29 @@ Once the android studio project is created
 Android Studio
 1. Click on [Tools/Firebase/RealTimeDatabase/Get started with realtime database]
 2. Click on add the Realtime Database to your app
+
+MainActivity.kt
+```javascript
+package com.example.usingfirebase
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+// add this import
+import com.google.firebase.database.FirebaseDatabase
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // set this value to firebase
+        var database = FirebaseDatabase.getInstance().reference
+        database.setValue("TEC")
+    }
+}
+
+```
+
     
     
     
