@@ -73,8 +73,8 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    android:hint="Name"\
    android:hint="Salary" \
    with the respective id:</br>
-   android:id="@+id/reg_id" \   
-   android:id="@+id/reg_name"\
+   android:id="@+id/reg_id" \
+   android:id="@+id/reg_name" \
    android:id="@+id/reg_sal" \
    and for the _Button_ as:</br>
    android:text="Insert" \
