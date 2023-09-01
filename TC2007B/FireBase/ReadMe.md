@@ -21,6 +21,7 @@ This tutorial shows how to create an APP to read and write into a google Firebas
     id("com.google.gms.google-services") version "4.3.15" apply false
     ```
 11. Copy paste the gradle dependencies at build.gradle(Module: )
+    
     _Plugins_
     ```javascript
     id("com.google.gms.google-services")
@@ -29,7 +30,7 @@ This tutorial shows how to create an APP to read and write into a google Firebas
     ```javascript
     implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
     ```
-13. Clock on go to console
+13. Click on go to console
 14. Click on the left side [Build/RealTime Database]
 15. Click on create database
 16. Click on start in **test mode**
@@ -65,7 +66,27 @@ Check the following value is set:
 
 https://{projet_ID}.firebaseio.com/:"TEC"
 
+### Add form / Android Studio
+1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and one _Button_ from the Palette:
+   Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as:
+   android:hint="ID"
+   android:hint="Name"
+   android:hint="Salary"
+   with the respective id:
+   android:id="@+id/reg_id"
+   android:id="@+id/reg_name"
+   android:id="@+id/reg_sal"
+   and for the _Button_ as:
+   android:text="Insert"
+   android:id="@+id/insert_button"
+3. Add buttons functionality in _MainActivity.kt_
+   ```javascript
 
+   ```
+4. Create the file _Users.kt_
+   ```javascript
+
+   ```
     
     
     
