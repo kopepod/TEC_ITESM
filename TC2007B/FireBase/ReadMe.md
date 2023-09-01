@@ -70,7 +70,7 @@ https://{projet_ID}.firebaseio.com/:"TEC"
 1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and one _Button_ from the Palette:
    Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as:
    
-   android:hint="ID" </br>   
+   <p>android:hint="ID" </p>   
    android:hint="Name"
    
    android:hint="Salary"
