@@ -70,15 +70,25 @@ https://{projet_ID}.firebaseio.com/:"TEC"
 1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and one _Button_ from the Palette:
    Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as:
    android:hint="ID"
+   
    android:hint="Name"
+   
    android:hint="Salary"
+   
    with the respective id:
+   
    android:id="@+id/reg_id"
+   
    android:id="@+id/reg_name"
+   
    android:id="@+id/reg_sal"
+   
    and for the _Button_ as:
+   
    android:text="Insert"
+   
    android:id="@+id/insert_button"
+   
 3. Add buttons functionality in _MainActivity.kt_
    ```javascript
 
