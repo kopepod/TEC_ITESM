@@ -67,7 +67,7 @@ Check the following value is set:
 https://{projet_ID}.firebaseio.com/:"TEC"
 
 ### Add form / Android Studio
-1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and one _Button_ from the Palette:
+1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and two _Button_ from the Palette:
    Rename android:text=" ... " -> android:hint=" ... " for all _Plain Text_ elements as: </br>
    android:hint="ID" \
    android:hint="Name"\
@@ -79,6 +79,8 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    and for the _Button_ as:</br>
    android:text="Insert" \
    android:id="@+id/insert_button" \
+   android:text="Fetch" \
+   android:id="@+id/fetch_button" \
 3. Add buttons functionality in _MainActivity.kt_
    ```javascript
    package com.example.usingfirebase
