@@ -170,7 +170,7 @@ https://{projet_ID}.firebaseio.com/:"TEC"
     }
    }
    ```
-   activity_mail.xml
+5. Full file _activity_mail.xml_
    ```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
