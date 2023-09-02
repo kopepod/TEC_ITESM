@@ -41,7 +41,7 @@ This tutorial shows how to create an APP to read and write into a google Firebas
 2. Click on add the Realtime Database to your app
 
 ### Check the Database / Android Studio
-Test the R/W database access in _MainActivity.kt_
+Test the R/W database access in _MainActivity.kt_ (this is not the final file see below)
 ```javascript
 package com.example.usingfirebase
 
