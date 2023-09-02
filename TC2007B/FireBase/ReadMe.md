@@ -81,20 +81,19 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    android:id="@+id/insert_button" \
 3. Add buttons functionality in _MainActivity.kt_
    ```javascript
-package com.example.usingfirebase
+   package com.example.usingfirebase
+   import androidx.appcompat.app.AppCompatActivity
+   import android.os.Bundle
+   import com.google.firebase.database.FirebaseDatabase
+   // add this resource
+   import android.widget.Button
+   import android.widget.EditText
+   import android.widget.TextView
+   import com.google.firebase.database.DataSnapshot
+   import com.google.firebase.database.DatabaseError
+   import com.google.firebase.database.ValueEventListener
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.google.firebase.database.FirebaseDatabase
-// add this resource
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-
-class MainActivity : AppCompatActivity() {
+   class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -150,8 +149,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    }
-}
+     }
+   }
    ```
 4. Create the file _Users.kt_
    ```javascript
