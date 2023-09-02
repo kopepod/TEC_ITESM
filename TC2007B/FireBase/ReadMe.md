@@ -81,6 +81,7 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    android:id="@+id/insert_button" \
    android:text="Fetch" \
    android:id="@+id/fetch_button" \
+   See the full file at the end \
 3. Add buttons functionality in _MainActivity.kt_
    ```javascript
    package com.example.usingfirebase
@@ -169,7 +170,91 @@ https://{projet_ID}.firebaseio.com/:"TEC"
     }
    }
    ```
-    
+   activity_mail.xml
+   ```xml
+	<?xml version="1.0" encoding="utf-8"?>
+	<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    tools:context=".MainActivity">
+	
+	    <TextView
+	        android:id="@+id/messageAPP"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Hello World!"
+	        app:layout_constraintBottom_toBottomOf="parent"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toBottomOf="@+id/reg_sal" />
+	
+	    <EditText
+	        android:id="@+id/reg_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="26dp"
+	        android:ems="10"
+	        android:hint="@string/id"
+	        android:inputType="textPersonName"
+	        android:minHeight="48dp"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toTopOf="parent" />
+	
+	    <EditText
+	        android:id="@+id/reg_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="44dp"
+	        android:ems="10"
+	        android:hint="@string/name"
+	        android:inputType="textPersonName"
+	        android:minHeight="48dp"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintHorizontal_bias="0.497"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toBottomOf="@+id/reg_id" />
+	
+	    <EditText
+	        android:id="@+id/reg_sal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="54dp"
+	        android:ems="10"
+	        android:hint="@string/salary"
+	        android:inputType="textPersonName"
+	        android:minHeight="48dp"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toBottomOf="@+id/reg_name" />
+	
+	    <Button
+	        android:id="@+id/insert_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="67dp"
+	        android:layout_marginEnd="115dp"
+	        android:text="@string/insert"
+	        app:layout_constraintBottom_toTopOf="@+id/messageAPP"
+	        app:layout_constraintEnd_toStartOf="@+id/fetch_button"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toBottomOf="@+id/reg_sal" />
+	
+	    <Button
+	        android:id="@+id/fetch_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="66dp"
+	        android:text="@string/fetch"
+	        app:layout_constraintBottom_toTopOf="@+id/messageAPP"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toEndOf="@+id/insert_button"
+	        app:layout_constraintTop_toBottomOf="@+id/reg_sal" />
+	
+	</androidx.constraintlayout.widget.ConstraintLayout>
+   ``` 
     
     
 
