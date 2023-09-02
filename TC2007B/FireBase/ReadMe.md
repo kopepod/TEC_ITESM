@@ -85,9 +85,8 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    ```
 4. Create the file _Users.kt_
    ```javascript
-package com.example.usingfirebase
-
-class Users {
+   package com.example.usingfirebase
+   class Users {
     var userID = 0
     var userNA = ""
     var userSA = 0
@@ -97,7 +96,7 @@ class Users {
         this.userSA = userSA
 
     }
-}
+   }
    ```
     
     
