@@ -85,7 +85,19 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    ```
 4. Create the file _Users.kt_
    ```javascript
+package com.example.usingfirebase
 
+class Users {
+    var userID = 0
+    var userNA = ""
+    var userSA = 0
+    constructor(userID: Int, userNA: String, userSA: Int){
+        this.userID = userID
+        this.userNA = userNA
+        this.userSA = userSA
+
+    }
+}
    ```
     
     
