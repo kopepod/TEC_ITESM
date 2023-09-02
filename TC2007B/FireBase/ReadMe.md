@@ -81,7 +81,77 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    android:id="@+id/insert_button" \
 3. Add buttons functionality in _MainActivity.kt_
    ```javascript
+package com.example.usingfirebase
 
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.google.firebase.database.FirebaseDatabase
+// add this resource
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val database = FirebaseDatabase.getInstance().reference
+        //database.setValue("TEC")
+
+        // get the elements values by their id
+        val insertbutton: Button = findViewById(R.id.insert_button)
+        val fetchtbutton: Button = findViewById(R.id.fetch_button)
+        val textID: EditText = findViewById(R.id.reg_id)
+        val textNA: EditText = findViewById(R.id.reg_name)
+        val textSA: EditText = findViewById(R.id.reg_sal)
+        val textMessage: TextView = findViewById(R.id.messageAPP)
+
+        // call the button functionality
+        insertbutton.setOnClickListener {
+            val id = textID.text.toString().toInt()
+            val na = textNA.text.toString()
+            val sa = textSA.text.toString().toInt()
+
+            // Overwrite every single register on request
+            //database.setValue( Users(id,na,sa) )
+            // Create a new entry on every request
+            database.child(id.toString()).setValue(Users(id,na,sa))
+        }
+
+        // call the button functionality
+        fetchtbutton.setOnClickListener {
+            // Retrive registers
+            // Hover *object* to implement members (alt+enter)
+            val fetchData = object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    //TODO("Not yet implemented")
+                    val mssg = StringBuilder()
+                    for(children in snapshot.children){
+                        val userID = children.child("userID").value
+                        val userNA = children.child("userNA").value
+                        val userSA = children.child("userSA").value
+                        mssg.append("key: ${children.key} ID: $userID Name:  $userNA Salary: $userSA \n")
+                    }
+                    textMessage.setText(mssg)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            }
+            // call the fetch data method
+            database.addValueEventListener(fetchData)
+            database.addListenerForSingleValueEvent(fetchData)
+         }
+
+
+
+    }
+}
    ```
 4. Create the file _Users.kt_
    ```javascript
