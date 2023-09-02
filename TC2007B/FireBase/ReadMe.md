@@ -88,7 +88,7 @@ https://{projet_ID}.firebaseio.com/:"TEC"
    import androidx.appcompat.app.AppCompatActivity
    import android.os.Bundle
    import com.google.firebase.database.FirebaseDatabase
-   // add this resource
+   // add these resources
    import android.widget.Button
    import android.widget.EditText
    import android.widget.TextView
