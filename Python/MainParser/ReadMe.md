@@ -1,5 +1,7 @@
 # Python Main Parser
 
+This snippet create the Main program's function and calls the external Modules.
+
 ```python
 # Main.py
 import MiModule
