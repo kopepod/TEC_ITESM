@@ -2,7 +2,7 @@
 
 This tutorial shows how to create a WEB APP on android studio. Create an empy project and edit 3 files.
 
-1. MainAcitivity.kt
+1. MainActivity.kt
   ```javascript
 package com.example.webappsol
 
@@ -69,8 +69,10 @@ class MainActivity : AppCompatActivity() {
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
