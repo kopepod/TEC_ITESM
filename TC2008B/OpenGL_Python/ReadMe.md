@@ -10,7 +10,7 @@ pip install pygame numpy PyOpenGL PyOpenGL_accelerate
 nano Main.py
 ```
 script
-```
+```python
 import pygame
 from OpenGL.GL import *
 from ctypes import sizeof, c_void_p
