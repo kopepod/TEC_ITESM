@@ -116,4 +116,4 @@ while True:
 4. Run without parser
 ```bash
 python Main.py
-``
+```
