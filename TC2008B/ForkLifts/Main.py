@@ -12,6 +12,10 @@ def main():
 	subparser.add_argument("--radious", required = False, type = float, default = 30, help = "");
 	subparser.set_defaults(func = LIB_TC2008B.Simulacion);
 
+	subparser = subparsers.add_parser("Nodos",  description = "Genera los nodos de la simulacion");
+	subparser.add_argument("--NumeroNodos", required = True, type = int, help = "Numero de nodos");
+	subparser.set_defaults(func = LIB_TC2008B.GeneracionDeNodos);
+	
 	Options = parser.parse_args();
 	
 	print(str(Options) + "\n");

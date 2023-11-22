@@ -1,4 +1,4 @@
-import yaml, pygame, random, glob, math
+import yaml, pygame, random, glob, math, numpy
 from Lifter import Lifter
 from Basura import Basura
 
@@ -12,6 +12,9 @@ textures = [];
 lifters = [];
 basuras = [];
 delta = 0;
+
+def GeneracionDeNodos():
+	print("")
 
 def loadSettingsYAML(File):
 	class Settings: pass
@@ -93,13 +96,20 @@ def Init(Options):
     for File in glob.glob(Settings.Materials + "*.*"):
         Texturas(File)
     
-    for i in range(Options.lifters):
-        # i es el identificator del agente
-        lifters.append(Lifter(Settings.DimBoard, 0.7, textures, i))
+    # Posiciones inicales de los montacargas
+    Positions = numpy.zeros((Options.lifters, 3))
     
-    for i in range(Options.Basuras):
+    NodosCarga = 10*[[70,0,70]];
+    
+    CurrentNode = 0;
+   
+    for i, p in enumerate(Positions):
+        # i es el identificator del agente
+        lifters.append(Lifter(Settings.DimBoard, 0.7, textures, i, p, CurrentNode ))
+    
+    for i, n in enumerate(NodosCarga):
         # i es el identificador de la carga: sirve para realizar el inventario
-        basuras.append(Basura(Settings.DimBoard,1,textures,3))
+        basuras.append(Basura(Settings.DimBoard,1,textures,3, i, n))
         
 def planoText():
     # activate textures

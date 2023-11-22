@@ -11,7 +11,7 @@ import math
 
 
 class Basura:
-    def __init__(self, dim, vel, textures, txtIndex):
+    def __init__(self, dim, vel, textures, txtIndex, idx, position):
         # Se inicializa las coordenadas de los vertices del cubo
         self.vertexCoords = [1,1,1,1,1,-1,1,-1,-1,1,-1,1,-1,1,1,-1,1,-1,-1,-1,-1,-1,-1,1,]
 
@@ -21,7 +21,7 @@ class Basura:
 
         self.dim = dim
         # Se inicializa una posicion aleatoria en el tablero
-        self.Position = [random.randint(-dim+15, dim-15), 2, random.randint(-dim+15, dim-15)]
+        self.Position = position
         # Inicializar las coordenadas (x,y,z) del cubo en el tablero
         # almacenandolas en el vector Position
         # ...

@@ -5,24 +5,35 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 
+NodosVisita = numpy.asarray( [
+ 	[0,0,0], # descarga de plastico
+ 	[10,0,30], # nodo intermedio de navegacion
+ 	[10,0,50], # nodo intermedio de navegacion 	
+ 	[70,0,70], # nodo donde esta la carga
+], dtype = numpy.float64 )
+
+A = numpy.zeros((3,3))
+
+A[0,1] = 1;
+A[1,2] = 1;
+A[2,0] = 1;
 
 class Lifter:
-	def __init__(self, dim, vel, textures, idx):
+	def __init__(self, dim, vel, textures, idx, position, currentNode):
 		self.dim = dim
 		self.idx = idx
 		# Se inicializa una posicion aleatoria en el tablero
 		# self.Position = [random.randint(-dim, dim), 6, random.randint(-dim, dim)]
-		self.Position = [0, 6, 0]
+		self.Position = position
 		# Inicializar las coordenadas (x,y,z) del cubo en el tablero
 		# almacenandolas en el vector Position
 
 		# Se inicializa un vector de direccion aleatorio
-		u = numpy.random.rand(3);
-		u[1] = 0;
-		u /= numpy.linalg.norm(u);
-		self.Direction = u;
+		self.Direction = numpy.zeros(3);
 		self.angle = 0
 		self.vel = vel
+		self.currentNode = currentNode;
+		self.nextNode = currentNode;
 		# El vector aleatorio debe de estar sobre el plano XZ (la altura en Y debe ser fija)
 		# Se normaliza el vector de direccion
 
@@ -55,28 +66,45 @@ class Lifter:
 		magnitude = math.sqrt(dirX**2 + dirZ**2)
 		self.Direction = [(dirX / magnitude), 0, (dirZ / magnitude)]
 
+
+	def ComputeDirection(self, Posicion, NodoSiguiente):
+		Direccion = NodosVisita[NodoSiguiente,:] - Posicion;
+		Direccion = numpy.asarray( Direccion);
+		Distancia = numpy.linalg.norm( Direccion )
+		Direccion /= Distancia;
+		return Direccion, Distancia;		
+		
+
+	def RetrieveNextNode(self, NodoActual):
+		if NodoActual == len(NodosVisita) - 1 :
+			return 0;
+		else:
+			return NodoActual + 1
+
 	def update(self, delta):
 
-		print(" Agent : %d \t State: %s \t Position : [%0.2f, 0 %0.2f] " %(self.idx, self.status, self.Position[0], self.Position[-1]) );
+		self.nextNode = self.RetrieveNextNode(self.currentNode);
+		
+		Direccion, Distancia =  self.ComputeDirection(self.Position, self.nextNode);
+		
+		if Distancia < 1:
+			self.currentNode = self.nextNode;
+		
+		#u = numpy.asarray(self.Position)
+		#dist = numpy.linalg.norm(u-NodosVisita, axis = 1)
+		#NodoActual = numpy.argmin(dist);
+		
+		mssg = "Agent:%d \t State:%s \t Position:[%0.2f,0,%0.2f] \t NodoActual:%d \t NodoSiguiente:%d" %(self.idx, self.status, self.Position[0], self.Position[-1], self.currentNode, self.nextNode); 
+		print(mssg);
 
 		match self.status:
 			case "searching":
 				# Update position
-				if random.randint(0,1000) == 0:
-					self.search()
-				newX = self.Position[0] + self.Direction[0] * self.vel
-				newZ = self.Position[2] + self.Direction[2] * self.vel
-				if newX - 10 < -self.dim or newX + 10 > self.dim:
-					self.Direction[0] *= -1
-				else:
-					self.Position[0] = newX
-				if newZ - 10 < -self.dim or newZ + 10 > self.dim:
-					self.Direction[2] *= -1
-				else:
-					self.Position[2] = newZ
+				self.Position += Direccion * self.vel;
+				self.Direction = Direccion;
 				self.angle = math.acos(self.Direction[0]) * 180 / math.pi
 				if self.Direction[2] > 0:
-					self.angle = 360 - self.angle
+					self.angle = 360 - self.angle				
 
 				# Move platform
 				if self.platformUp:
@@ -114,7 +142,7 @@ class Lifter:
 						self.angle = 360 - self.angle
 			case "dropping":
 				if self.platformHeight <= -1.5:
-					self.status = "returning"
+					self.status = "searching"
 				else:
 					self.platformHeight -= delta
 			case "returning":
