@@ -29,12 +29,12 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
-    public List <Transform> Nodos = new List <Transform>();
+    public List <Transform> Nodes = new List <Transform>();
     private Transform targetNodoPoint;
     // Start is called before the first frame update
     void Start()
     {
-        targetNodoPoint = Nodos[0];
+        targetNodoPoint = Nodes[0];
     }
 
     // Update is called once per frame
@@ -47,3 +47,5 @@ public class Control : MonoBehaviour
 }
 
 ```
+Save it and drag the empty Node to Control Nodes elemnts list.
+
