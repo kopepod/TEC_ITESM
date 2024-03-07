@@ -18,5 +18,32 @@ Move the empty object to X = 1 and Z = 1
 2. See the inspector Add Component
 3. Click on Add Component/Script
 4. Name the script, mine is Control
+5. Click on Component/Physics/RigidBody
 
 4. Edit Control.cs
+
+```c++
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Control : MonoBehaviour
+{
+    public List <Transform> Nodos = new List <Transform>();
+    private Transform targetNodoPoint;
+    // Start is called before the first frame update
+    void Start()
+    {
+        targetNodoPoint = Nodos[0];
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 direction2target = targetNodoPoint.position - transform.position; // vector de desplazamiento
+        float currentDistance = Vector3.Distance(transform.position, targetNodoPoint.position);
+        Debug.Log("Distance to Node: " + currentDistance);	
+    }
+}
+
+```
