@@ -40,7 +40,7 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction2target = targetNodoPoint.position - transform.position; // vector de desplazamiento
+        Vector3 direction2target = targetNodoPoint.position - transform.position;
         float currentDistance = Vector3.Distance(transform.position, targetNodoPoint.position);
         Debug.Log("Distance to Node: " + currentDistance);	
     }
