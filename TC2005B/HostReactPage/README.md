@@ -36,7 +36,7 @@ git remote add origin https://github.com/<github-username>/<repo-name>.git
 
 Enable a token to create site:
 
-Click your Avatar (top right) → Settings → Developer settings → Personal access tokens → Tokens (classic).
+Click your Avatar (top right) → Settings → Developer settings → Personal access tokens → Tokens (classic). -> Only repo should be fine
 
 ```bash
 git remote set-url origin https://<token>@github.com/<username>/<repo>
