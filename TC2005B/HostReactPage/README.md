@@ -17,6 +17,13 @@ Add this line
 ```bash
 "homepage": "https://<github-username>.github.io/<repo-name>/"
 ```
+and these to scripts:
+```bash
+"scripts": {
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+}
+```
 
 Run
 
@@ -35,13 +42,7 @@ Click your Avatar (top right) → Settings → Developer settings → Personal a
 git remote set-url origin https://<token>@github.com/<username>/<repo>
 ```
 
-Scripts:
-```bash
-"scripts": {
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
-}
-```
+
 
 Deploy via
 
