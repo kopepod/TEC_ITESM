@@ -31,7 +31,7 @@ Run
 npm test
 npm run build
 git init
-git remote add origin https://github.com/><github-username>/<repo-name>.git
+git remote add origin https://github.com/<github-username>/<repo-name>.git
 ```
 
 Enable a token to create site:
