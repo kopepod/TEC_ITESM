@@ -230,26 +230,26 @@ nano my_app/templates/index.html
 
 ```html
 {% load static %}
-<title>MuN: Music Notifications</title>
+<title>Kopepod Django example</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
 <header class="header">
   <div class="header-text">Sign in via:</div>
-  <a href="#" class="header-link">Spotify</a>
-  <a href="#" class="header-link">Deezer</a>
+  <a href="#" class="header-link">MySpace</a>
+  <a href="#" class="header-link">Mail.ru</a>
 </header>
 <section class="landing-section landing-main">
   <div class="landing-section-content">
-    <h1 class="brand">MuN</h1>
+    <h1 class="brand">Kopepod</h1>
     <h2>
-      <span class="brand-text">Mu</span>sic
-      <span class="brand-text">N</span>otifications
+      <span class="brand-text">Ko</span>pe
+      <span class="brand-text">p</span>od the drifter
     </h2>
     <p class="landing-main-text">
-      Got tired of missing out on releases from your favourite artists?
+      My example TC3005b
       <br>
-      You have found a perfect solution...
+      Django python-based back-end
     </p>
   </div>
 </section>
@@ -269,6 +269,7 @@ nano my_app/templates/index.html
     </ul>
   </section>
 </section>
+
 ```
 
 The final structure should look like ...
