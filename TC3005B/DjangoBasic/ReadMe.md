@@ -170,7 +170,7 @@ nano my_app/static/style.css
 } 
 
 .landing-main { 
-  background: url(https://images.unsplash.com/photo-1460667262436-cf19894f4774) no-repeat center center fixed; 
+  background: url(https://github.com/kopepod/TEC_ITESM/blob/main/TC3005B/DjangoBasic/Background.jpg?raw=true) no-repeat center center fixed; 
   background-size: cover;
 }
 
