@@ -21,11 +21,9 @@ sudo systemctl status mongod
 (Optional Compass) https://www.mongodb.com/try/download/compass
 
 ## 2. Create databse
-db.csv
-```csv
-Name,Email,Age
-John Doe,jonhy@mail.ru,24
-Karla,kitty@yahoo.com,32
+
+```bash
+echo -e "Name,Email,Age\nJohn Doe,jonhy@mail.ru,24\nKarla,kitty@yahoo.com,32" > db.csv
 ```
 Import csv to mongodb
 ```bash
