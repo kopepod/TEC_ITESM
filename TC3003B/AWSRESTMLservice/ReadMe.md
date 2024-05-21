@@ -53,18 +53,12 @@ def lambda_handler(event, context):
 * python-3-8-scikit-learn-0-22-1 select your region https://github.com/kopepod/TEC_ITESM/blob/main/TC3003B/AWSRESTMLservice/AWS_ARN_layers.csv
 
 ## API gateway
-1. Login https://us-east-1.console.aws.amazon.com/console/
-2. Search API gateway
-3. Click on Create API
-4. Select HTTP API and click Build
-5. Add integration, select Lambda
-6. Find _myfunction_
-7. Click on add integration
-8. Name API, e.g., newAPI
-9. Methods, leave ANY, click Next
-10. Stages default and click Next
-11. Review, click Create
-12. Copy *Invoke URL*, e.g., https://{APIgate}.execute-api.{zone}.amazonaws.com/
+1. Click on + Add Trigger
+2. Select API GateWay
+3. Create a new API
+4. HTTP API
+5. Security > Open
+6. Click on Add
 
 ## Curl
 Generate the following bash script and save it, e.g., mybash.sh
