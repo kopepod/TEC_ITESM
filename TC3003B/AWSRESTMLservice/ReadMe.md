@@ -2,9 +2,16 @@
 
 This code is to generate a Machine Learning REST service using AWS
 
-1. Create a Lambda function
-2. Create an API gateway
-3. Test using curl
+1. Set Environment
+2. Create a Lambda function
+3. Create an API gateway
+4. Test using curl
+
+## Set Environment
+```bash
+conda create -n test python=3.8
+pip install scikit-learn==0.22.1 numpy==1.19.5 pandas==1.2.5
+```
 
 ## Lambda Function
 1. Login https://us-east-1.console.aws.amazon.com/console/
