@@ -16,9 +16,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl status mongod
-``
-
-(Optional Compass) https://www.mongodb.com/try/download/compass
+```
+(Optional install compass) https://www.mongodb.com/try/download/compass
 
 ## 2. Create databse
 
