@@ -50,7 +50,7 @@ def lambda_handler(event, context):
 9. zip lambda_function.py and BestModel.p into myzip.zp
 10. upload myzip.zip from AWS lambda
 11. Add layers (scroll down Add a Layer)
-* python-3-8-scikit-learn-0-22-1 select your region https://github.com/model-zoo/scikit-learn-lambda/blob/master/layers.csv
+* python-3-8-scikit-learn-0-22-1 select your region https://raw.githubusercontent.com/kopepod/TEC_ITESM/main/TC3003B/AWSRESTMLservice/AWS_ARN_layers.csv
 
 ## API gateway
 1. Login https://us-east-1.console.aws.amazon.com/console/
