@@ -6,7 +6,7 @@
 | TC3005B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1O2r4QQko_apwocfai6taanMpgUn49nUO) |
 | TC2005B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1nAueyY5_405u47bZvCDDSsdXQxK67vRL) |
 | TC2008B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1BQ4b9J9Hzsgf-mjIgFpz6PkmL_GQVCzI) |
-| TC1028  | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1LVKuheT-Yk5Q50VYEEovq0_rN7r3OUg6) |
+| TC1028  | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1EbmSXEfQndE52yagyxOCxqhO1o3Pep1h?usp=sharing) |
 | TC2007B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1QJWMN-wu0GoW6mXxNwgCB1ys2s06QTb5) |
 | TC3004B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1oW3hlimjNoAdxSGL6CavJEaV1-vrllZj) |
 | TI3005B | [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1YhlOW30i8HC1gjmt9lB3ZMaO1qU7z8PB) |
