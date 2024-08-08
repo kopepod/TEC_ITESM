@@ -60,26 +60,27 @@ print(z)
 ### 2. Data structures
 
 Create data frame
-
+```r
 DF <- data.frame(z, row.names = c("A","B"))
 print(DF)
 attributes(DF)
+```
 
 Rename columns
-
+```r
 names(DF) <- c("A","B","C")
 print(DF)
-
+```
 Retrieve column
-
+```r
 DF$C
-
+```
 Other ways of accessing
-
+```r
 DF["C"]
 
 DF[3]
-
+```
 Modify values
 
 attributes(DF)$row.names <- c("first","second")
