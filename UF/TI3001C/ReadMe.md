@@ -20,32 +20,44 @@ print("Hi there")
 
 Declare array
 
+```r
 x <- 1:6
+```
 
 Perform operation
 
+```r
 y <- x^2
+```
 
 Display arrays
 
+```r
 print(x)
 print(y)
+```
 
 Matrix operations
 
+```r
 z <- x+y
+```
 
 Reshape into matrix
 
+```r
 z <- matrix(z, nrow = 3)
 print(z)
+```
 
 Several wise operators on matrix and transpose
 
+```r
 z <- 2*t(z)-2
 print(z)
+```
 
-## 2. Data structures
+### 2. Data structures
 
 Create data frame
 
