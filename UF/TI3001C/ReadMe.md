@@ -1,3 +1,7 @@
-# TC1004B
+# TI3001C
 
-Aqui encontraras recursos para IoT
+## R-install
+
+```bash
+sudo apt install r-base
+```
