@@ -82,18 +82,51 @@ DF["C"]
 DF[3]
 ```
 Modify values
-
+```r
 attributes(DF)$row.names <- c("first","second")
 print(DF)
-
-## 3. Functions
+```
+### 3. Functions
 
 Declaration
-
+```r
 f <- function(x,y){
   z <- 2*x + 3*y
   return(z)
 }
 
 f(2,3)
+```
 
+
+Map arrays
+```r
+f(1:2,2:3)
+f(c(1,2,3),c(4,5,6))
+f(0:3,4)
+
+infix operation
+```r
+'%sumsq%' <- function(x,y){x ^ 2 + y ^ 2}
+1:3 %sumsq% -(1:3)
+```
+
+lambda
+```r
+sapply(0:5, \(i) i ^ 2 )
+```
+
+Nested operations on preloaded data
+```r
+mtcars
+```
+
+Nested without vert operator
+```r
+nrow(subset(mtcars, cyl == 4))
+```
+
+Nested with vert opeator
+```r
+mtcars |> subset(cyl == 4) |> nrow()
+```
