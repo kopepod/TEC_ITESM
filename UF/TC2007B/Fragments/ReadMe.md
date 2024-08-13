@@ -123,7 +123,14 @@ class SecondActivity : AppCompatActivity() {
 }
 ```
 
-6. Modify the _AdroidManifest.xml_ to include the Second Activity
+6. Modify the _AdroidManifest.xml_ to include the Second Activity adding these lines
+
+```xml
+<activity android:name=".SecondActivity"></activity>
+```
+
+The file should look like this
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
