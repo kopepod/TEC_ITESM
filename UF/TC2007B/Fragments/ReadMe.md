@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         randombutton.setOnClickListener{
             // The moment you create the next line creates SecondActivity.kt 
             val intent = Intent(this, SecondActivity::class.java)
-            // Create the xml fragment on ALT+ENTER
+            // Create the xml fragment on ALT+ENTER i.e. SecondActivity.kt
             val countValue = mytext.text.toString().toInt()
             intent.putExtra(SecondActivity.TOTAL_COUNT, countValue)
             startActivity(intent)
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-5. See the script Below _MainActivity.kt_
+5. See the script Below _SecondActivity.kt_
 
 ```javascript
 package com.example.test120824
@@ -97,6 +97,7 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // The moment you add this line the xml will be generated
         setContentView(R.layout.activity_second)
         val backbttn : Button = findViewById(R.id.buttonback)
         showRandomNumber()
