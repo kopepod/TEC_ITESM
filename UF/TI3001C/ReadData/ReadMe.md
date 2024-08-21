@@ -66,6 +66,12 @@ pie(Survived, labels = lbls, main="Pie Chart of Survived column data\n (with sam
 
 ```
 
+Scatter Plots
+```r
+plot(DF$Age, DF$Fare, xlab = "Age", ylab = "Fare")
+hist(DF$Fare)
+```
+
 Histograms
 ```r
 print("Histograms")
@@ -88,9 +94,5 @@ Box Plots
 ```r
 boxplot(DF$Fare, main="Fare charged from passengers")
 ```
-Scatter Plots
-```r
-plot(DF$Age, DF$Fare, xlab = "Age", ylab = "Fare")
-hist(DF$Fare)
-```
+
    
