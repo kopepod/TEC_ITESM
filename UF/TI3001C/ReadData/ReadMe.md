@@ -8,7 +8,7 @@
 system("wget https://tecmx-my.sharepoint.com/:x:/g/personal/rleyv_tec_mx/EYHOAX28ve1Kq20EbiCRi7sBcSK_dOq5MR_gmup_2nL9NA?Download=1 -O titanic.csv")
 ```
 
-## Basic Commands
+## Elementary Analysis
 
 Load dataset into a DataFrame
 
