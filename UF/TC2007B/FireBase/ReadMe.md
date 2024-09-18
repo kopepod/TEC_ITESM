@@ -34,14 +34,14 @@ This tutorial shows how to create an APP to read and write into a google Firebas
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services") //new
-}
+		}
 
-android {
-    namespace = "com.example.test180924"
+		android {
+    namespace = "com.example.usingfirebase"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.test180924"
+        applicationId = "com.example.usingfirebase"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,9 +66,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
+		}
 
-dependencies {
+		dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -79,7 +79,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(platform("com.google.firebase:firebase-bom:33.3.0")) //new
-}
+		}
     ```
     
 12. Build Gradle Project (Click Compile)
