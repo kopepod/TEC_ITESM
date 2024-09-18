@@ -17,7 +17,7 @@ This tutorial shows how to create an APP to read and write into a google Firebas
 7. Click on register and download the _google-services.json_ file.
 8. That file must be placed at: [Project] /UsingFireBase/app/
 9. Copy paste the gradle dependencies at build.gradle(Project: ). Build.gradle.kts should look like this
-    ```
+    ```javascript
 		// Top-level build file where you can add configuration options common to all sub-projects/modules.
 		plugins {
     	alias(libs.plugins.android.application) apply false
@@ -29,7 +29,7 @@ This tutorial shows how to create an APP to read and write into a google Firebas
     
     Build.gradle.kts (:app) should look like this
     
-    ```
+    ```javascript
     plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
