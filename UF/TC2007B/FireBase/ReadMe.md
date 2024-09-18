@@ -3,7 +3,7 @@
 This tutorial shows how to create an APP to read and write into a google Firebase database.
 
 ## Android Studio
-1. Create an empty project in Android Studio
+1. Create an _Empty Views Activity_ project in Android Studio
 2. Name the project, mine is **UsingFireBase**
 
 
@@ -115,9 +115,6 @@ class MainActivity : AppCompatActivity() {
 }
 
 ```
-Check the following value is set:
-
-https://{projet_ID}.firebaseio.com/:"TEC"
 
 ### Add form / Android Studio
 1. Go to [Android] /res/layout/activity_main.xml and create three _Plain Text_ items and two _Button_ from the Palette. Full file _activity_main.xml_
